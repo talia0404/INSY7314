@@ -18,10 +18,11 @@ This week’s focus is on **project setup**: scaffolding a secure backend and fr
   - In your own words, explain why data integrity and application security are critical for a public blog.
 
 ### 2. Build the Backend  
-> **Follow Lab Guide §2.3: Backend API**  
+> **Follow Lab Guide  2.3: Backend API**  
 1. **Initialize & Install:**  
    ```bash
-   mkdir secureblog-backend && cd secureblog-backend
+   mkdir secureblog-backend
+   cd secureblog-backend
    npm init -y
    npm install express cors helmet dotenv mongoose express-rate-limit
    npm install --save-dev nodemon
@@ -42,11 +43,11 @@ This week’s focus is on **project setup**: scaffolding a secure backend and fr
        └── middleware/    # errorHandler.js, rateLimiter.js
    ```
 3. In `app.js`, apply `helmet()`, `cors()`, `express.json()`, and add a GET `/` route that returns `"SecureBlog API running!"`.
-4. In `server.js`, load `PORT` from `.env`, connect to MongoDB (Lab Guide §2.4), and start the server with nodemon.
+4. In `server.js`, load `PORT` from `.env`, connect to MongoDB (Lab Guide  2.4), and start the server with nodemon.
 
 ### 3. Generate SSL Certificates
 
-> **Follow Lab Guide §2.2: SSL Setup**
+> **Follow Lab Guide  2.2: SSL Setup**
 
 * Create your key & self‑signed cert for HTTPS:
 
@@ -71,7 +72,7 @@ This week’s focus is on **project setup**: scaffolding a secure backend and fr
 
 ### 4. Integrate MongoDB
 
-> **Follow Lab Guide §2.4: Mongoose Integration**
+> **Follow Lab Guide  2.4: Mongoose Integration**
 
 * **User** model: `username`, `email`, `passwordHash`
 * **Post** model: `title`, `content`, `authorId`, `createdAt`
